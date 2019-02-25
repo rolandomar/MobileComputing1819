@@ -2,4 +2,5 @@
     <string name="app_name">TestApplication</string>
     <string name="action_settings">Settings</string>
     <string name="dump">Test</string>
+    <string name="title_activity_second">SecondActivity</string>
 </resources>

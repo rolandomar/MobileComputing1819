@@ -1,21 +1,23 @@
-The code in this project is a proof-of-concept for integrating Netty and Jersey 2.0.
-Dependency management is done using Maven.
+# Jersey-Jetty-REST
 
-The tricky part is implementing NettyHandlerContainer and NettyHandlerContainerProvider (which at the moment isn't used.
-I recommend checking them out, and contributing as there are some missing features for full integration.
+A simple RESTful web service realized with Maven, Jersey and Jetty.
 
-##Requirements##
-- Maven
-- Java version 1.6 (not tested with other versions as of now)
+Resources in this context are actual files stored in your project root and organized within a HashMap.
 
-##Instructions##
-- Clone the repository
-- Run `mvn clean install` from the projects root directory
-- `mvn package`
-- `java -jar target/server-0.1-SNAPSHOT-jar-with-dependencies.jar
-- Go to http://localhost:8080 to view
+| Endpoint      | HTTP Method   | Response  |
+| ------------- |:-------------:| -----:|
+| /resources    | GET           | A list of available resources |
+| /resources    | POST          | HTTP Status code |
+| /resources/{id} | GET         | Content of the resource with the given id |
+| /resources/{id} | DELETE      | HTTP Status code |
 
-#TODO#
-- SecurityContext is a black-box as of now. This needs a lot of work to get right.
-- No idea what PropertiesDelegate is for. I think we need it for _something_.
-- A lot of nice JavaDoc explaining what's going on.
+## Usage
+
+**Start the server**
+
+```compile exec:java```
+
+**Check if it works**
+
+```curl "http://localhost:8080/resources/1"```
+

@@ -30,7 +30,7 @@ public class DocumentResource {
 	}
 
 	@POST
-	//@Consumes(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
 	public void createResource(String content) {
 		System.out.println("Post called");
 		System.out.println("value>"+content+"<");

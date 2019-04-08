@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory android:title="Main">
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:title="@string/pref_title_pref1"
+        android:key="switch"
+        android:summary="@string/pref_sum_pref1" />
+
+</PreferenceCategory>
+</PreferenceScreen>
